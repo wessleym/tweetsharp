@@ -75,8 +75,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\hammock\src\net40\Hammock.ClientProfile\Hammock.csproj">
-      <Project>{487b7e3c-9689-47bc-8785-73ccd92a3749}</Project>
+    <ProjectReference Include="..\..\hammock\src\net20\Hammock\Hammock.csproj">
+      <Project>{80647b8c-e162-4e34-a758-590280f11b97}</Project>
       <Name>Hammock %28Hammock\Hammock%29</Name>
     </ProjectReference>
     <ProjectReference Include="..\TweetSharp\TweetSharp.csproj">

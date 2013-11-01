@@ -237,12 +237,6 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\hammock\src\net40\Hammock.Silverlight\Hammock.Silverlight.csproj">
-      <Project>{46affe9e-b0df-4de9-a1a3-1773e08dcb51}</Project>
-      <Name>Hammock.Silverlight</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

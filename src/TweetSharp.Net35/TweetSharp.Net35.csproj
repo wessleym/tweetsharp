@@ -228,7 +228,7 @@
     <Content Include="assembly.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\hammock\src\net35\Hammock.ClientProfile\Hammock.Net35.csproj">
+    <ProjectReference Include="..\..\hammock\src\net35\Hammock.ClientProfile\Hammock.ClientProfile.csproj">
       <Project>{73015806-7be4-4bab-aa07-acc719efe85a}</Project>
       <Name>Hammock.Net35</Name>
     </ProjectReference>
