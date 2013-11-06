@@ -15,14 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetSharp", "TweetSharp\Tw
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hammock", "Hammock", "{0C6ACA0E-F33B-439A-BA09-DB9E2C2A772F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hammock.ClientProfile", "..\hammock\src\net35\Hammock.ClientProfile\Hammock.ClientProfile.csproj", "{73015806-7BE4-4BAB-AA07-ACC719EFE85A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8C093261-2320-4546-971B-1CBA1ABA2D0D}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hammock", "..\hammock\src\net40\Hammock\Hammock.csproj", "{CD569558-9092-466B-8670-EA1B151150E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,19 +40,19 @@ Global
 		{10BFAA13-B836-4B37-B2D3-D4FEB3F3C484}.Mono|Any CPU.Build.0 = Release|Any CPU
 		{10BFAA13-B836-4B37-B2D3-D4FEB3F3C484}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10BFAA13-B836-4B37-B2D3-D4FEB3F3C484}.Release|Any CPU.Build.0 = Release|Any CPU
-		{73015806-7BE4-4BAB-AA07-ACC719EFE85A}.ClientProfiles|Any CPU.ActiveCfg = Release|Any CPU
-		{73015806-7BE4-4BAB-AA07-ACC719EFE85A}.ClientProfiles|Any CPU.Build.0 = Release|Any CPU
-		{73015806-7BE4-4BAB-AA07-ACC719EFE85A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73015806-7BE4-4BAB-AA07-ACC719EFE85A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73015806-7BE4-4BAB-AA07-ACC719EFE85A}.Mono|Any CPU.ActiveCfg = Release|Any CPU
-		{73015806-7BE4-4BAB-AA07-ACC719EFE85A}.Mono|Any CPU.Build.0 = Release|Any CPU
-		{73015806-7BE4-4BAB-AA07-ACC719EFE85A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73015806-7BE4-4BAB-AA07-ACC719EFE85A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD569558-9092-466B-8670-EA1B151150E0}.ClientProfiles|Any CPU.ActiveCfg = ClientProfiles|Any CPU
+		{CD569558-9092-466B-8670-EA1B151150E0}.ClientProfiles|Any CPU.Build.0 = ClientProfiles|Any CPU
+		{CD569558-9092-466B-8670-EA1B151150E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD569558-9092-466B-8670-EA1B151150E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD569558-9092-466B-8670-EA1B151150E0}.Mono|Any CPU.ActiveCfg = ClientProfiles|Any CPU
+		{CD569558-9092-466B-8670-EA1B151150E0}.Mono|Any CPU.Build.0 = ClientProfiles|Any CPU
+		{CD569558-9092-466B-8670-EA1B151150E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD569558-9092-466B-8670-EA1B151150E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{73015806-7BE4-4BAB-AA07-ACC719EFE85A} = {0C6ACA0E-F33B-439A-BA09-DB9E2C2A772F}
+		{CD569558-9092-466B-8670-EA1B151150E0} = {0C6ACA0E-F33B-439A-BA09-DB9E2C2A772F}
 	EndGlobalSection
 EndGlobal
