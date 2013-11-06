@@ -1,7 +1,10 @@
 ## Tweetsharp
 ```powershell
-    PM> Install-Package TweetSharp          
+    PM> Install-Package TweetSharp-Unofficial
 ```
+
+**_This is unofficial bug fix package._**
+
 
 **_This project is no longer actively developed by its creator. v2.3.1 is the final release._**
 **_If someone forks this project and proves active and interested ongoing development, I will transfer this repo to them._**
