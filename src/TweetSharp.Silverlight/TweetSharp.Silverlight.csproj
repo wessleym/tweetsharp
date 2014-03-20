@@ -52,8 +52,11 @@
     <AssemblyOriginatorKeyFile>..\TweetSharp\key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Hammock.Silverlight">
+      <HintPath>..\..\hammock\bin\lib\sl4\Hammock.Silverlight.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
     </Reference>

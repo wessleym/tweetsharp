@@ -344,7 +344,11 @@ namespace TweetSharp
         private static JObject ParseInnerContent(string entity, string content, Type outer,  Type cursor, JObject instance, ref JArray array)
         {
             var inner = new Regex(string.Format(" \"{0}\" : ", entity),
-                                  RegexOptions.Compiled | RegexOptions.CultureInvariant | RegexOptions.IgnoreCase |
+#if !SILVERLIGHT
+                                  RegexOptions.Compiled | 
+#endif
+                                  RegexOptions.CultureInvariant | 
+                                  RegexOptions.IgnoreCase | 
                                   RegexOptions.IgnorePatternWhitespace);
             if (!inner.IsMatch(content))
             {
