@@ -41,7 +41,11 @@
     <AssemblyOriginatorKeyFile>..\TweetSharp\key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Hammok">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\hammock\bin\lib\net35-client\Hammock.ClientProfile.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net35\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -226,12 +230,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assembly.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\hammock\src\net35\Hammock.ClientProfile\Hammock.ClientProfile.csproj">
-      <Project>{73015806-7be4-4bab-aa07-acc719efe85a}</Project>
-      <Name>Hammock.Net35</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
