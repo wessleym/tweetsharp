@@ -25,6 +25,7 @@ namespace TweetSharp
         private bool? _isProtected;
         private string _location;
         private string _name;
+        private string _profileBannerUrl;
         private string _profileImageUrl;
         private string _screenName;
         private TwitterStatus _status;
@@ -122,6 +123,24 @@ namespace TweetSharp
 
                 _description = value;
                 OnPropertyChanged("Description");
+            }
+        }
+        
+#if !Smartphone && !NET20
+        [DataMember]
+#endif
+        public virtual string ProfileBannerUrl
+        {
+            get { return _profileBannerUrl; }
+            set
+            {
+                if (_profileBannerUrl == value)
+                {
+                    return;
+                }
+
+                _profileBannerUrl = value;
+                OnPropertyChanged("ProfileBannerUrl");
             }
         }
 
