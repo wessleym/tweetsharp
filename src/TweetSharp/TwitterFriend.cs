@@ -14,13 +14,21 @@ namespace TweetSharp
     [JsonObject(MemberSerialization.OptIn)]
     public class TwitterFriend : PropertyChangedBase, ITwitterModel
     {
-        private long _id;
-        private string _screenName;
-        private bool _following;
         private bool _followedBy;
-        private bool? _notificationsEnabled;
+
+        private bool _following;
+
         private bool? _canDm;
+
+        private long _id;
+        private string _idStr;
+        private string _screenName;
+
+        private bool? _notificationsEnabled;
+
         private bool? _blocking;
+
+        private bool? _muting;
 
 #if !Smartphone && !NET20
         [DataMember]
@@ -37,6 +45,24 @@ namespace TweetSharp
 
                 _id = value;
                 OnPropertyChanged("Id");
+            }
+        }
+
+#if !Smartphone && !NET20
+        [DataMember]
+#endif
+        public virtual string IdStr
+        {
+            get { return _idStr; }
+            set
+            {
+                if (_idStr == value)
+                {
+                    return;
+                }
+
+                _idStr = value;
+                OnPropertyChanged("IdStr");
             }
         }
 
@@ -147,6 +173,25 @@ namespace TweetSharp
 
                 _blocking = value;
                 OnPropertyChanged("IsBlocking");
+            }
+        }
+
+#if !Smartphone && !NET20
+        [DataMember]
+#endif
+        [JsonProperty("muting")]
+        public virtual bool? IsMuting
+        {
+            get { return _muting; }
+            set
+            {
+                if (_muting == value)
+                {
+                    return;
+                }
+
+                _muting = value;
+                OnPropertyChanged("IsMuting");
             }
         }
 

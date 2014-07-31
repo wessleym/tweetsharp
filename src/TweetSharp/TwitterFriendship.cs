@@ -84,7 +84,8 @@ namespace TweetSharp
     public class TwitterFriendshipLookup : PropertyChangedBase, ITwitterModel
     {
         private string _name;
-        private int _id;
+        private long _id;
+        private string _idStr;
         private ICollection<string> _connections;
         private string _screenName;
     
@@ -154,7 +155,7 @@ namespace TweetSharp
 #if !Smartphone && !NET20
         [DataMember]
 #endif
-        public virtual int Id
+        public virtual long Id
         {
             get { return _id; }
             set
@@ -166,6 +167,25 @@ namespace TweetSharp
 
                 _id = value;
                 OnPropertyChanged("Id");
+            }
+        }
+
+        [JsonProperty("id_str")]
+#if !Smartphone && !NET20
+        [DataMember]
+#endif
+        public virtual string IdStr
+        {
+            get { return _idStr; }
+            set
+            {
+                if (_idStr == value)
+                {
+                    return;
+                }
+
+                _idStr = value;
+                OnPropertyChanged("IdStr");
             }
         }
 
