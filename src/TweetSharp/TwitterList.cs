@@ -34,6 +34,7 @@ namespace TweetSharp
     public class TwitterList : PropertyChangedBase, ITwitterModel
     {
         private long _id;
+        private string _idStr;
         private string _name;
         private string _fullName;
         private string _slug;
@@ -63,6 +64,25 @@ namespace TweetSharp
 
                 _id = value;
                 OnPropertyChanged("Id");
+            }
+        }
+
+        [JsonProperty("id_str")]
+#if !Smartphone && !NET20
+        [DataMember]
+#endif
+        public virtual string IdStr
+        {
+            get { return _idStr; }
+            set
+            {
+                if (_idStr == value)
+                {
+                    return;
+                }
+
+                _idStr = value;
+                OnPropertyChanged("IdStr");
             }
         }
 
