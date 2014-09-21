@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{46B07B5B-DEDD-4609-AD5E-CCAF8D8B607E}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>.</OutputPath>
+    <OutputPath>..\..\bin\TweetSharp.Mono</OutputPath>
     <DefineConstants>DEBUG,Mono,NET40</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,7 +26,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>.</OutputPath>
+    <OutputPath>..\..\bin\TweetSharp.Mono</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
@@ -192,6 +192,9 @@
     <Compile Include="..\TweetSharp\WhereOnEarthPlaceType.cs">
       <Link>WhereOnEarthPlaceType.cs</Link>
     </Compile>
+    <Compile Include="..\TweetSharp\TwitterGeoLocationSearch.cs">
+      <Link>TwitterGeoLocationSearch.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
@@ -202,16 +205,20 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="Hammock">
-      <HintPath>..\packages\Hammock.1.3.1\lib\4.0\Hammock.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\TweetSharp\key.snk">
       <Link>key.snk</Link>
     </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\hammock\src\mono\Hammock.Mono\Hammock.Mono.csproj">
+      <Project>{C8371692-DA90-4437-BCB7-A5A2EF37B095}</Project>
+      <Name>Hammock.Mono</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

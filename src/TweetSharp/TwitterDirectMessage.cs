@@ -24,6 +24,7 @@ namespace TweetSharp
                                         ITweetable
     {
         private long _id;
+        private string _idStr;
         private long _recipientId;
         private string _recipientScreenName;
         private TwitterUser _recipient;
@@ -49,6 +50,25 @@ namespace TweetSharp
 
                 _id = value;
                 OnPropertyChanged("Id");
+            }
+        }
+
+        [JsonProperty("id_str")]
+#if !Smartphone && !NET20
+        [DataMember]
+#endif
+        public virtual string IdStr
+        {
+            get { return _idStr; }
+            set
+            {
+                if (_idStr == value)
+                {
+                    return;
+                }
+
+                _idStr = value;
+                OnPropertyChanged("IdStr");
             }
         }
 

@@ -19,41 +19,168 @@ namespace TweetSharp
                                IEquatable<TwitterUser>,
                                ITweeter
     {
+
+        // The private properties (only) are sorted in the same order than the plateform-objetcs description
+        // https://dev.twitter.com/docs/platform-objects/users
+
+        private bool? _contributorsEnabled;
+        private DateTime _createdDate; //created_at
+        private bool? _defaultProfile;
+        private bool _defaultProfileImage;
         private string _description;
+        //entities
+        private int _favouritesCount;
+        private bool? _followRequestSent;
+        //following deprecated
         private int _followersCount;
+        private int _friendsCount;
+        private bool? _isGeoEnabled; //geo_enabled
         private long _id;
-        private bool? _isProtected;
+        private string _idStr; //id_str
+        private bool? _isTranslator;
+        private string _language; //lang
+        private int _listedCount;
         private string _location;
         private string _name;
-        private string _profileBannerUrl;
-        private string _profileImageUrl;
-        private string _screenName;
-        private TwitterStatus _status;
-        private string _url;
-        private DateTime _createdDate;
-        private bool? _isVerified;
-        private bool? _isGeoEnabled;
-        private bool _isProfileBackgroundTiled;
+        private bool? _notifications;
         private string _profileBackgroundColor;
         private string _profileBackgroundImageUrl;
+        private string _profileBackgroundImageUrlHttps;
+        private bool _isProfileBackgroundTiled; //profile_background_tile
+        private string _profileBannerUrl;
+        private string _profileImageUrl;
+        private string _profileImageUrlHttps;
         private string _profileLinkColor;
         private string _profileSidebarBorderColor;
         private string _profileSidebarFillColor;
         private string _profileTextColor;
+        private bool _profileUseBackgroundImage;
+        private bool? _isProtected; //protected
+        private string _screenName;
+        private bool _showAllInlineMedia;
+        private TwitterStatus _status;
         private int _statusesCount;
-        private int _friendsCount;
-        private int _favouritesCount;
-        private int _listedCount;
         private string _timeZone;
+        private string _url;
         private string _utcOffset;
-        private string _language;
-        private bool? _followRequestSent;
-        private bool? _isTranslator;
-        private bool? _contributorsEnabled;
-        private bool? _defaultProfile;
-        private string _profileBackgroundImageUrlHttps;
-        private string _profileImageUrlHttps;
-        
+        private bool? _isVerified; //verified
+        private string _withheldInCountries;
+        private string _withheldScope;
+
+ 
+#if !Smartphone && !NET20
+        [DataMember]
+#endif
+        public virtual bool? Notifications
+        {
+            get { return _notifications; }
+            set
+            {
+                if (_notifications == value)
+                {
+                    return;
+                }
+
+                _notifications = value;
+                OnPropertyChanged("Notifications");
+            }
+        }
+
+#if !Smartphone && !NET20
+        [DataMember]
+#endif
+        public virtual string IdStr
+        {
+            get { return _idStr; }
+            set
+            {
+                if (_idStr == value)
+                {
+                    return;
+                }
+
+                _idStr = value;
+                OnPropertyChanged("IdStr");
+            }
+        }
+
+
+#if !Smartphone && !NET20
+        [DataMember]
+#endif
+        public virtual bool ProfileUseBackgroundImage
+        {
+            get { return _profileUseBackgroundImage; }
+            set
+            {
+                if (_profileUseBackgroundImage == value)
+                {
+                    return;
+                }
+
+                _profileUseBackgroundImage = value;
+                OnPropertyChanged("ProfileUseBackgroundImage");
+            }
+        }
+
+
+#if !Smartphone && !NET20
+        [DataMember]
+#endif
+        public virtual bool ShowAllInlineMedia
+        {
+            get { return _showAllInlineMedia; }
+            set
+            {
+                if (_showAllInlineMedia == value)
+                {
+                    return;
+                }
+
+                _showAllInlineMedia = value;
+                OnPropertyChanged("ShowAllInlineMedia");
+            }
+        }
+
+
+#if !Smartphone && !NET20
+        [DataMember]
+#endif
+        public virtual string WithheldInCountries
+        {
+            get { return _withheldInCountries; }
+            set
+            {
+                if (_withheldInCountries == value)
+                {
+                    return;
+                }
+
+                _withheldInCountries = value;
+                OnPropertyChanged("WithheldInCountries");
+            }
+        }
+
+
+
+#if !Smartphone && !NET20
+        [DataMember]
+#endif
+        public virtual string WithheldScope
+        {
+            get { return _withheldScope; }
+            set
+            {
+                if (_withheldScope == value)
+                {
+                    return;
+                }
+
+                _withheldScope = value;
+                OnPropertyChanged("WithheldScope");
+            }
+        }
+
 #if !Smartphone && !NET20
         [DataMember]
 #endif
@@ -669,6 +796,24 @@ namespace TweetSharp
 
                 _defaultProfile = value;
                 OnPropertyChanged("IsDefaultProfile");
+            }
+        }
+
+#if !Smartphone && !NET20
+        [DataMember]
+#endif
+        public virtual bool DefaultProfileImage
+        {
+            get { return _defaultProfileImage; }
+            set
+            {
+                if (_defaultProfileImage == value)
+                {
+                    return;
+                }
+
+                _defaultProfileImage = value;
+                OnPropertyChanged("DefaultProfileImage");
             }
         }
 

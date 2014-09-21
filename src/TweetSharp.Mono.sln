@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetSharp.Mono", "TweetSharp.Mono\TweetSharp.Mono.csproj", "{46B07B5B-DEDD-4609-AD5E-CCAF8D8B607E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hammock.Mono", "..\hammock\src\mono\Hammock.Mono\Hammock.Mono.csproj", "{C8371692-DA90-4437-BCB7-A5A2EF37B095}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{46B07B5B-DEDD-4609-AD5E-CCAF8D8B607E}.Debug|x86.Build.0 = Debug|x86
 		{46B07B5B-DEDD-4609-AD5E-CCAF8D8B607E}.Release|x86.ActiveCfg = Release|x86
 		{46B07B5B-DEDD-4609-AD5E-CCAF8D8B607E}.Release|x86.Build.0 = Release|x86
+		{C8371692-DA90-4437-BCB7-A5A2EF37B095}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C8371692-DA90-4437-BCB7-A5A2EF37B095}.Debug|x86.Build.0 = Debug|Any CPU
+		{C8371692-DA90-4437-BCB7-A5A2EF37B095}.Release|x86.ActiveCfg = Release|Any CPU
+		{C8371692-DA90-4437-BCB7-A5A2EF37B095}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = TweetSharp.Mono\TweetSharp.Mono.csproj
