@@ -3,9 +3,9 @@
     PM> Install-Package TweetSharp-Unofficial-DotNetCore
 ```
 
----
-This an unofficial re-release of the original TweetSharp-Unofficial so that it can be .NET Standard 2.0 compliant.  Specifically, this is a combination of TweetSharp and Hammock (on which TweetSharp relies).  A small portion of the code has been rewritten so it can be compatible with .NET Standard 2.0.
----
+----
+**This an unofficial re-release of the original TweetSharp-Unofficial so that it can be .NET Standard 2.0 compliant.  Specifically, this is a combination of TweetSharp and Hammock (on which TweetSharp relies).  A small portion of the code has been rewritten so it can be compatible with .NET Standard 2.0.**
+----
 
 ----
 
