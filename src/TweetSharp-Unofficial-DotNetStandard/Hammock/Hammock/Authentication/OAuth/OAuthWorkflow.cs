@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using Hammock.Extensions;
 using Hammock.Web;
-using WessleyMitchell.Data.Collections;
-using WessleyMitchell.Extensions.IDictionaryExtensions;
 using Microsoft.Extensions.Primitives;
 using System.Collections.Concurrent;
 using System.Collections;
@@ -248,10 +246,51 @@ namespace Hammock.Authentication.OAuth
             return info;
         }
 
-        public static IEnumerableReadIndexable<string, string> ParseQuery(string query)
+        public class LazyDictionary<TKey, TValue> : IEnumerable<KeyValuePair<TKey, TValue>>
+        {
+            private ConcurrentDictionary<TKey, TValue> dictionary;
+            private Func<TKey, TValue> valueFactory;
+            public LazyDictionary(Func<TKey, TValue> valueFactory)
+            {
+                dictionary = new ConcurrentDictionary<TKey, TValue>();
+                this.valueFactory = valueFactory;
+            }
+
+            public IEnumerator<KeyValuePair<TKey, TValue>> GetEnumerator()
+            {
+                return dictionary.GetEnumerator();
+            }
+
+            IEnumerator IEnumerable.GetEnumerator()
+            {
+                return GetEnumerator();
+            }
+
+            public TValue this[TKey key]
+            {
+                get
+                {
+                    return dictionary.GetOrAdd(key, valueFactory);
+                }
+            }
+
+            public bool TryGetValue(TKey key, out TValue value)
+            {
+                return dictionary.TryGetValue(key, out value);
+            }
+        }
+
+        public static LazyDictionary<string, string> ParseQuery(string query)
         {
             Dictionary<string, StringValues> dictionary = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(query);
-            return new LazyDictionary<string, string>(key => dictionary.TryGetValue(key));
+            return new LazyDictionary<string, string>(key =>
+                {
+                    StringValues sv;
+                    if (!dictionary.TryGetValue(key, out sv)) { return null; }
+                    string value = sv.ToString();
+                    if (sv==""){ return null;}
+                    return sv;
+                });
         }
 
         public virtual OAuthWebQueryInfo BuildProtectedResourceInfo(WebMethod method, 

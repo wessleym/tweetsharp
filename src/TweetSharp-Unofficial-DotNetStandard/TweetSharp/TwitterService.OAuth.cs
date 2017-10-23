@@ -7,8 +7,6 @@ using Hammock.Web;
 using System.Collections.Generic;
 using Microsoft.Extensions.Primitives;
 using System.Collections.Concurrent;
-using WessleyMitchell.Extensions.IDictionaryExtensions;
-using WessleyMitchell.Data.Collections;
 
 #if !SILVERLIGHT
 //using System.Compat.Web;
