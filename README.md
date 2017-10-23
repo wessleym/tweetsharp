@@ -4,16 +4,8 @@
 ```
 
 ---
-
 This an unofficial re-release of the original TweetSharp-Unofficial so that it can be .NET Standard 2.0 compliant.  Specifically, this is a combination of TweetSharp and Hammock (on which TweetSharp relies).  A small portion of the code has been rewritten so it can be compatible with .NET Standard 2.0.
-
 ---
-
-----
-
-**_This is unofficial bug fix package._**
-
-----
 
 **_This project is no longer actively developed by its creator. v2.3.1 is the final release._**
 **_If someone forks this project and proves active and interested ongoing development, I will transfer this repo to them._**
