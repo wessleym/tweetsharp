@@ -1,6 +1,6 @@
 ## Tweetsharp
 ```powershell
-    PM> Install-Package TweetSharp-Unofficial-DotNetCore
+    PM> Install-Package TweetSharp-Unofficial-DotNetStandard
 ```
 
 ---
