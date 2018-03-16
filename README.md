@@ -5,7 +5,7 @@
 
 ---
 
-*This an unofficial re-release of the original TweetSharp-Unofficial so that it can be .NET Standard 2.0 compliant.  Specifically, this is a combination of TweetSharp and Hammock (on which TweetSharp relies).  A small portion of the code has been rewritten so it can be compatible with .NET Standard 2.0.  A project mine relied on TweetSharp, so when I converted my project, I decided to convert TweetSharp as well.  Now I'm sharing it with others.*
+*This an unofficial re-release of the original TweetSharp-Unofficial so that it can be .NET Standard 2.0 compliant.  Specifically, this is a combination of TweetSharp and Hammock (on which TweetSharp relies).  I have rewritten a small portion of the code so it can be compatible with .NET Standard 2.0.  A project of mine relied on TweetSharp, so when I converted my project, I decided to convert TweetSharp as well.  Now I'm sharing it with others.*
 
 ---
 
